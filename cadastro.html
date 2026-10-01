@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cadastro de apoiadores e voluntários da Rede Esperança.">
+  <meta name="keywords" content="cadastro, voluntariado, apoiador, ONG, Rede Esperança">
+  <meta name="author" content="Equipe Rede Esperança">
+  <meta name="theme-color" content="#0f766e">
+  <title>Rede Esperança | Cadastro</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a class="brand" href="index.html" aria-label="Rede Esperança - página inicial">
+        <img src="assets/images/logo.svg" width="48" height="48" alt="">
+        <span>Rede <strong>Esperança</strong></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menu</span>
+        ☰
+      </button>
+      <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a class="active" aria-current="page" href="cadastro.html">Cadastro</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="page-banner" aria-labelledby="titulo-cadastro">
+      <div class="container">
+        <p class="eyebrow">Faça parte</p>
+        <h1 id="titulo-cadastro">Cadastre-se para apoiar nossas iniciativas</h1>
+        <p>Preencha os dados abaixo para demonstrar interesse em voluntariado, doações ou outras formas de participação.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="formulario-titulo">
+      <div class="container form-layout">
+        <form id="cadastro-form" class="form-card" action="#" method="post">
+          <div class="section-heading">
+            <p class="eyebrow">Cadastro</p>
+            <h2 id="formulario-titulo">Seus dados</h2>
+            <p>Os campos marcados com <span aria-hidden="true">*</span> são obrigatórios.</p>
+          </div>
+
+          <fieldset>
+            <legend>Identificação</legend>
+            <div class="form-grid">
+              <div class="field full">
+                <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+                <input id="nome" name="nome" type="text" autocomplete="name" minlength="5" required placeholder="Digite seu nome completo">
+              </div>
+              <div class="field">
+                <label for="email">E-mail <span aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required placeholder="voce@email.com">
+              </div>
+              <div class="field">
+                <label for="cpf">CPF <span aria-hidden="true">*</span></label>
+                <input id="cpf" name="cpf" type="text" inputmode="numeric" autocomplete="off" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required>
+              </div>
+              <div class="field">
+                <label for="telefone">Telefone <span aria-hidden="true">*</span></label>
+                <input id="telefone" name="telefone" type="tel" inputmode="tel" autocomplete="tel" maxlength="15" pattern="\(\d{2}\) \d{4,5}-\d{4}" placeholder="(11) 99999-9999" required>
+              </div>
+              <div class="field">
+                <label for="nascimento">Data de nascimento <span aria-hidden="true">*</span></label>
+                <input id="nascimento" name="nascimento" type="date" autocomplete="bday" required>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Endereço</legend>
+            <div class="form-grid">
+              <div class="field full">
+                <label for="endereco">Endereço <span aria-hidden="true">*</span></label>
+                <input id="endereco" name="endereco" type="text" autocomplete="street-address" minlength="5" required placeholder="Rua, número e complemento">
+              </div>
+              <div class="field">
+                <label for="cep">CEP <span aria-hidden="true">*</span></label>
+                <input id="cep" name="cep" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="9" pattern="\d{5}-\d{3}" placeholder="00000-000" required>
+              </div>
+              <div class="field">
+                <label for="cidade">Cidade <span aria-hidden="true">*</span></label>
+                <input id="cidade" name="cidade" type="text" autocomplete="address-level2" required placeholder="São Paulo">
+              </div>
+              <div class="field">
+                <label for="estado">Estado <span aria-hidden="true">*</span></label>
+                <select id="estado" name="estado" autocomplete="address-level1" required>
+                  <option value="">Selecione</option>
+                  <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Interesse</legend>
+            <div class="field">
+              <label for="interesse">Como você deseja participar? <span aria-hidden="true">*</span></label>
+              <select id="interesse" name="interesse" required>
+                <option value="">Selecione uma opção</option>
+                <option value="voluntariado">Voluntariado</option>
+                <option value="doacao">Doação</option>
+                <option value="parceria">Parceria institucional</option>
+                <option value="newsletter">Receber novidades</option>
+              </select>
+            </div>
+            <div class="field checkbox-field">
+              <input id="termos" name="termos" type="checkbox" required>
+              <label for="termos">Concordo com o uso dos dados exclusivamente para fins de contato relacionados ao projeto. <span aria-hidden="true">*</span></label>
+            </div>
+          </fieldset>
+
+          <div id="form-feedback" class="feedback" aria-live="polite"></div>
+          <button class="button primary full-button" type="submit">Enviar cadastro</button>
+        </form>
+
+        <aside class="form-aside">
+          <figure>
+            <picture>
+              <source srcset="assets/images/register.webp" type="image/webp">
+              <img src="assets/images/register.png" width="560" height="420" alt="Pessoa preenchendo cadastro para participar de uma iniciativa social" loading="lazy">
+            </picture>
+            <figcaption>Participação começa com uma pequena ação.</figcaption>
+          </figure>
+          <div class="aside-note">
+            <h2>Por que se cadastrar?</h2>
+            <p>Seu cadastro permite organizar oportunidades, comunicar novidades e criar uma experiência mais próxima para voluntários e apoiadores.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>&copy; <span id="ano-atual"></span> Rede Esperança. Projeto acadêmico.</p>
+      <nav aria-label="Links do rodapé">
+        <ul class="footer-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
